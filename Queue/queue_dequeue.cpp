@@ -20,6 +20,7 @@ void Enqueue(int data){
       queue[end] = data;
       end++;
    }
+
    return;
 }
 void Dequeue(){
@@ -44,6 +45,7 @@ void Display(){
    for (i = top; i < end; i++) {
       printf(" %d <-- ", queue[i]);
    }
+   cout<<"\n";
    return;
 }
 void Front(){
@@ -56,18 +58,26 @@ void Front(){
 }
 };
 int main(void){
-   Queue q(4);
+     Queue q(5);
    q.Display();
+
    q.Enqueue(17);
    q.Enqueue(31);
    q.Enqueue(85);
    q.Enqueue(42);
+
    q.Display();
+
    q.Enqueue(52);
+
    q.Display();
+
    q.Dequeue();
    q.Dequeue();
+
    q.Display();
+
    q.Front();
+
    return 0;
 }
